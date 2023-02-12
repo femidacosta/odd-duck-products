@@ -4,12 +4,18 @@
 
 body {
   background-color: #f8ecd6;
-  color: #000;
+  color: #2329a8;
   margin: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   display: grid;
   grid-template-columns: 1fr 3fr; /* 2 columns in the grid-first part is 3 parts the size of the next part*/
   grid-template-rows: 10vh 80vh 10vh; /* grid split into 7 parts. vh changes the size of the 3 template rows*/
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: #453c67;
+  color: #f2f7a1;
 }
 
 /*GRID STYLES */
@@ -23,18 +29,18 @@ grid-column-end
 
 */
 /* header to take up the whole first row*/
+
 header {
   grid-area: 1 / 1 / 2 / 3; /*this takes the header right along the top from GL 1 - 3*/
   background-color: #f8ecd6;
-  color: black;
-  border: 1px solid #6d72c3;
+  color: rgb(34, 33, 33);
 }
 
 #results {
-  grid-area: 2 / 1 / 3 / 2;
-  background-color: #f8ecd6;
-  color: black;
-  border: 1px solid #6d72c3;
+  grid-area: 2 / 1 / 3 / 3;
+  background-color: #6d72c3;
+  color: #f8ecd6;
+  border: 1px solid #2329a8;
 }
 
 #main-container {
@@ -48,6 +54,24 @@ header {
 }
 
 footer {
-  grid-area: 3 / 1 / 4/ 3;
-  background-color: #2329a8;
+  grid-area: 3 / 1 / 4 / 3;
+  background-color: #6050dc;
+  border: 1px solid #f8ecd6;
+}
+
+#siteLogo {
+  width: 220px;
+  z-index: 4;
+}
+
+/* main styles */
+
+#img-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #6d72c3;
+}
+
+#img-container img {
+  max-width: 30%;
 }
